@@ -6,6 +6,7 @@ ENV AIRFLOW_HOME=/airflow
 COPY requirements.txt .
 COPY airflow_setup_files/airflow_postgres_db.sh .
 COPY airflow_setup_files/setup_airflow.sh .
+COPY dags/xcom_spending_natwest.py /airflow/dags
 
 RUN apt-get update \
     && apt-get install sudo \
