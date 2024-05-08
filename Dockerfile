@@ -1,6 +1,7 @@
 FROM python:3.11-slim
 
 RUN mkdir /airflow
+RUN mkdir /airflow/dags
 
 ENV AIRFLOW_HOME=/airflow
 COPY requirements.txt .
